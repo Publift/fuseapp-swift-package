@@ -1,0 +1,11 @@
+framework module FuseAppSDK {
+  umbrella header "FuseAppSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module FuseAppSDK.Swift {
+  header "FuseAppSDK-Swift.h"
+  requires objc
+}

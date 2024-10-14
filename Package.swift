@@ -30,18 +30,15 @@ let package = Package(
         ),
         .binaryTarget(
             name: "FuseAppSDKFramework",
-            url: "https://dl.cloudsmith.io/MuoLsp1oKgkvmnkF/publift/fuseapp-dev/raw/versions/1.2.1/FuseAppSDK.xcframework.zip",
-            checksum: "f1f8d232e37f3be36963c49a4af1d33bed097944ccb417da5d952f6f4d100e32"
+            path: "Frameworks/FuseAppSDK.xcframework"
         ),
         .binaryTarget(
             name: "PrebidMobile",
-            url: "https://dl.cloudsmith.io/MuoLsp1oKgkvmnkF/publift/fuseapp-dev/raw/versions/2.2.0/PrebidMobile.xcframework.zip",
-            checksum: "fdfab96b1b998dbf81846dba416387177bb574e134ee73a9d9099d211546fbdc"
+            path: "Frameworks/PrebidMobile.xcframework"
         ),
         .binaryTarget(
             name: "PubliftShared",
-            url: "https://dl.cloudsmith.io/MuoLsp1oKgkvmnkF/publift/fuseapp-dev/raw/versions/1.2.1/PubliftShared.xcframework.zip",
-            checksum: "679312dd6d8d7ab7671259f631d8ddc27f5be629b30a7e7a99bcf15f023a54ee"
+            path: "Frameworks/PubliftShared.xcframework"
         )
     ]
 )

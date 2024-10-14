@@ -1,0 +1,8 @@
+framework module PubliftShared {
+    umbrella header "PubliftShared.h"
+
+    export *
+    module * { export * }
+
+    use Foundation
+}

@@ -1,0 +1,134 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name FuseAppSDK
+import AdSupport
+import CryptoKit
+import Foundation
+@_exported import FuseAppSDK
+import GoogleMobileAds
+import PubliftShared
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public class FuseAdsManager {
+  required public init(provider: any FuseAppSDK.FuseAdsProvider, preloadSize: Swift.Int = 0)
+  weak public var rootViewController: UIKit.UIViewController? {
+    get
+    set
+  }
+  public func getAdView(id: Foundation.UUID) -> FuseAppSDK.FuseAdView?
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class FuseAdView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) final public let code: Swift.String
+  @_Concurrency.MainActor(unsafe) public var showProgress: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) weak public var rootViewController: UIKit.UIViewController? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) required public init(code: Swift.String, customTargeting: [Swift.String : Swift.String]? = nil)
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public class var requiresConstraintBasedLayout: Swift.Bool {
+    @objc get
+  }
+}
+extension FuseAppSDK.FuseAdView : UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+}
+public struct FuseAdData {
+  public let code: Swift.String
+  public let showProgress: Swift.Bool
+  public let customTargeting: [Swift.String : Swift.String]?
+  public init(code: Swift.String, showProgress: Swift.Bool = true, customTargeting: [Swift.String : Swift.String]? = nil)
+  public func create() -> FuseAppSDK.FuseAdView
+}
+public protocol FuseAdsProvider {
+  func getNextInput() -> FuseAppSDK.FuseAdData?
+}
+public struct RandomFuseAdsProvider : FuseAppSDK.FuseAdsProvider {
+  public init(data: [FuseAppSDK.FuseAdData])
+  public func getNextInput() -> FuseAppSDK.FuseAdData?
+}
+public struct SingleFuseAdsProvider : FuseAppSDK.FuseAdsProvider {
+  public init(data: FuseAppSDK.FuseAdData)
+  public func getNextInput() -> FuseAppSDK.FuseAdData?
+}
+public class SequentialFuseAdsProvider : FuseAppSDK.FuseAdsProvider {
+  public init(data: [FuseAppSDK.FuseAdData])
+  public func getNextInput() -> FuseAppSDK.FuseAdData?
+  @objc deinit
+}
+public struct FuseAdViewRepresentable : SwiftUI.UIViewRepresentable {
+  public init(code: Swift.String, customTargeting: [Swift.String : Swift.String]? = nil)
+  public init(view: FuseAppSDK.FuseAdView)
+  @_Concurrency.MainActor(unsafe) public func makeUIView(context: FuseAppSDK.FuseAdViewRepresentable.Context) -> FuseAppSDK.FuseAdView
+  @_Concurrency.MainActor(unsafe) public func updateUIView(_ view: FuseAppSDK.FuseAdView, context: FuseAppSDK.FuseAdViewRepresentable.Context)
+  @_Concurrency.MainActor(unsafe) public func makeCoordinator() -> FuseAppSDK.FuseAdViewRepresentable.Coordinator
+  @objc @_hasMissingDesignatedInitializers public class Coordinator : ObjectiveC.NSObject {
+    @objc deinit
+  }
+  public typealias Body = Swift.Never
+  public typealias UIViewType = FuseAppSDK.FuseAdView
+}
+@_hasMissingDesignatedInitializers public class FuseLoggingUtil {
+  public enum LogLevel {
+    case verbose
+    case debug
+    case info
+    case warning
+    case error
+    public static func == (a: FuseAppSDK.FuseLoggingUtil.LogLevel, b: FuseAppSDK.FuseLoggingUtil.LogLevel) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static func setLoggingLevel(_ level: FuseAppSDK.FuseLoggingUtil.LogLevel)
+  public static func debug(_ message: Swift.String)
+  public static func info(_ message: Swift.String)
+  public static func warn(_ message: Swift.String)
+  public static func error(_ message: Swift.String)
+  public static func verbose(_ message: Swift.String)
+  public static func log(_ level: FuseAppSDK.FuseLoggingUtil.LogLevel, _ message: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class FuseSDK : PubliftShared.FuseConfigSupplier {
+  public static let shared: FuseAppSDK.FuseSDK
+  public var isZoneInspectorEnabled: Swift.Bool
+  @discardableResult
+  public func initializeSDK() -> Swift.Bool
+  public func enableTestMode(_ enable: Swift.Bool)
+  public var isTestModeEnabled: Swift.Bool {
+    get
+  }
+  @objc public func getConfig() -> PubliftShared.FuseConfig?
+  public func setCurrentScreen(_ screenName: Swift.String? = nil)
+  @objc public func addListener(listener_ listener: any PubliftShared.ConfigListener)
+  @objc public func removeListener(listener_ listener: any PubliftShared.ConfigListener)
+  @objc deinit
+}
+extension FuseAppSDK.FuseSDK : PubliftShared.ConfigListener {
+  @objc dynamic public func onConfigChanged(config: PubliftShared.FuseConfig)
+}
+extension FuseAppSDK.FuseSDK : PubliftShared.FuseScreenIdSupplier {
+  @objc dynamic public func getScreenId() -> Swift.String?
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func fillChild(child: UIKit.UIView, insets: UIKit.UIEdgeInsets = .zero, priority: UIKit.UILayoutPriority = .defaultHigh)
+  @_Concurrency.MainActor(unsafe) public func centerChild(child: UIKit.UIView, priority: UIKit.UILayoutPriority = .defaultHigh)
+}
+extension UIKit.UIApplication {
+  @_Concurrency.MainActor(unsafe) public func topMostViewController(base: UIKit.UIViewController? = nil) -> UIKit.UIViewController?
+}
+extension FuseAppSDK.FuseLoggingUtil.LogLevel : Swift.Equatable {}
+extension FuseAppSDK.FuseLoggingUtil.LogLevel : Swift.Hashable {}
