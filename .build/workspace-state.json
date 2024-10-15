@@ -1,0 +1,117 @@
+{
+  "object" : {
+    "artifacts" : [
+      {
+        "kind" : "xcframework",
+        "packageRef" : {
+          "identity" : "fuseapp-swift-package",
+          "kind" : "root",
+          "location" : "/Users/nathan.peles/Developer/fuseapp-swift-package",
+          "name" : "fuseapp-swift-package"
+        },
+        "path" : "/Users/nathan.peles/Developer/fuseapp-swift-package/Frameworks/PrebidMobile.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "PrebidMobile"
+      },
+      {
+        "kind" : "xcframework",
+        "packageRef" : {
+          "identity" : "fuseapp-swift-package",
+          "kind" : "root",
+          "location" : "/Users/nathan.peles/Developer/fuseapp-swift-package",
+          "name" : "fuseapp-swift-package"
+        },
+        "path" : "/Users/nathan.peles/Developer/fuseapp-swift-package/Frameworks/PubliftShared.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "PubliftShared"
+      },
+      {
+        "kind" : "xcframework",
+        "packageRef" : {
+          "identity" : "fuseapp-swift-package",
+          "kind" : "root",
+          "location" : "/Users/nathan.peles/Developer/fuseapp-swift-package",
+          "name" : "fuseapp-swift-package"
+        },
+        "path" : "/Users/nathan.peles/Developer/fuseapp-swift-package/Frameworks/FuseAppSDK.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "FuseAppSDKFramework"
+      },
+      {
+        "kind" : "xcframework",
+        "packageRef" : {
+          "identity" : "swift-package-manager-google-mobile-ads",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
+          "name" : "GoogleMobileAds"
+        },
+        "path" : "/Users/nathan.peles/Developer/fuseapp-swift-package/.build/artifacts/swift-package-manager-google-mobile-ads/GoogleMobileAds/GoogleMobileAds.xcframework",
+        "source" : {
+          "checksum" : "94f8c64ee70b51a18d7fe130d6a145b47ee8c30babe63a68782a0d2e883386ed",
+          "type" : "remote",
+          "url" : "https://dl.google.com/googleadmobadssdk/94f8c64ee70b51a1/googlemobileadsios-spm-11.10.0.zip"
+        },
+        "targetName" : "GoogleMobileAds"
+      },
+      {
+        "kind" : "xcframework",
+        "packageRef" : {
+          "identity" : "swift-package-manager-google-user-messaging-platform",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
+          "name" : "GoogleUserMessagingPlatform"
+        },
+        "path" : "/Users/nathan.peles/Developer/fuseapp-swift-package/.build/artifacts/swift-package-manager-google-user-messaging-platform/UserMessagingPlatform/UserMessagingPlatform.xcframework",
+        "source" : {
+          "checksum" : "0f5de87a8e5fd13fc8d18f451f1b5390aa68446bfe718d5caefdcd5fa7653afd",
+          "type" : "remote",
+          "url" : "https://dl.google.com/googleadmobadssdk/0f5de87a8e5fd13f/googleusermessagingplatformios-spm-2.6.0.zip"
+        },
+        "targetName" : "UserMessagingPlatform"
+      }
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "swift-package-manager-google-mobile-ads",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
+          "name" : "GoogleMobileAds"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "1e60477cbc4c4868ec8414524f8cd163132753ff",
+            "version" : "11.10.0"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "swift-package-manager-google-mobile-ads"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "swift-package-manager-google-user-messaging-platform",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
+          "name" : "GoogleUserMessagingPlatform"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "74f2ec169551c3b924947b473716142a0b983e10",
+            "version" : "2.6.0"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "swift-package-manager-google-user-messaging-platform"
+      }
+    ]
+  },
+  "version" : 6
+}
