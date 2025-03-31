@@ -18,6 +18,10 @@ let package = Package(
             from: "11.2.0"
         ),
         .package(
+            url: "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
+            from: "2.7.0"
+        ),
+        .package(
             url: "https://github.com/Vungle/VungleAdsSDK-SwiftPackageManager.git",
             exact: "7.4.4"
         )
@@ -27,6 +31,7 @@ let package = Package(
             name: "FuseAppSDKTargets",
             dependencies: [
                 .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
+                .product(name: "GoogleUserMessagingPlatform", package: "swift-package-manager-google-user-messaging-platform"),
                 .product(name: "VungleAdsSDK", package: "VungleAdsSDK-SwiftPackageManager"),
                 .target(name: "AmazonPublisherServicesSDK"),
                 .target(name: "FBAudienceNetwork"),
@@ -51,8 +56,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "FuseAppSDKFramework",
-            url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/FuseAppSDK-iOS-1.5.2.zip",
-            checksum: "2abdb500a888697a507c9e924edcaadc6c99dc1ec8ff7cd66da69c66bed5d455"
+            url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/FuseAppSDK-iOS-1.6.0.zip",
+            checksum: "36e1341c80627233042124e2e2871fcb64442ff0d5a546eb8c702582ab6597c2"
         ),
         .binaryTarget(
             name: "GoogleMobileAdsMediationFacebook",
@@ -81,8 +86,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "PubliftShared",
-            url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/PubliftShared-iOS-1.5.2.zip",
-            checksum: "2f2bc3bfe1fa12cbf4528b989efb7144ce2bc9c70ceca69812834a96ba67246d"
+            url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/PubliftShared-iOS-1.6.0.zip",
+            checksum: "8b4a014ead48d521fe7b784f34686253dad1f4807c1b959ff4fe528b24a87a61"
         )
     ]
 )
