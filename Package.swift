@@ -22,10 +22,6 @@ let package = Package(
             from: "3.0.0"
         ),
         .package(
-            url: "https://github.com/prebid/prebid-mobile-ios.git",
-            exact: "3.1.0"
-        ),
-        .package(
             url: "https://github.com/Vungle/VungleAdsSDK-SwiftPackageManager.git",
             exact: "7.5.3"
         )
@@ -36,7 +32,6 @@ let package = Package(
             dependencies: [
                 .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
                 .product(name: "GoogleUserMessagingPlatform", package: "swift-package-manager-google-user-messaging-platform"),
-                .product(name: "PrebidMobile", package: "prebid-mobile-ios"),
                 .product(name: "VungleAdsSDK", package: "VungleAdsSDK-SwiftPackageManager"),
                 .target(name: "AmazonPublisherServicesSDK"),
                 .target(name: "FBAudienceNetwork"),
@@ -45,6 +40,8 @@ let package = Package(
                 .target(name: "GoogleMobileAdsMediationInMobi"),
                 .target(name: "GoogleMobileAdsMediationVungle"),
                 .target(name: "InMobiSDK"),
+                .target(name: "PrebidMobile"),
+                .target(name: "PrebidMobileOMSDK"),
                 .target(name: "PubliftShared")
             ]
         ),
@@ -61,7 +58,7 @@ let package = Package(
         .binaryTarget(
             name: "FuseAppSDKFramework",
             url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/FuseAppSDK-iOS-2.0.0.zip",
-            checksum: "58764a0629b593ff8459a7a2699ad9ede9732304ab488381dec94e7f9a91657f"
+            checksum: "64ced165fcb1bac23ce3cf2da6bb9cc260614be0e101b174f16b1ecef8024998"
         ),
         .binaryTarget(
             name: "GoogleMobileAdsMediationFacebook",
@@ -84,9 +81,19 @@ let package = Package(
             checksum: "ab0f05cd8aa0a7b1085a2b4f57f06ba27ae5dc310e1d9c1241011bba6ba98949"
         ),
         .binaryTarget(
+            name: "PrebidMobile",
+            url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/PrebidMobile-iOS-3.1.0.zip",
+            checksum: "410c61af942550469ccc17ef748b9a2f4e5321094e18f910099f3d334db8391a"
+        ),
+        .binaryTarget(
+            name: "PrebidMobileOMSDK",
+            url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/PrebidMobileOMSDK-iOS-1.5.5.zip",
+            checksum: "8a463aebf191b055e08a365d21dad89581e275a8ce7c9804e7079e1da1a043db"
+        ),
+        .binaryTarget(
             name: "PubliftShared",
             url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/PubliftShared-iOS-2.0.0.zip",
-            checksum: "c31884e6e408ccc93a5c6b4cddbddb6bd1620d282a2d86960c547104410f8daf"
+            checksum: "a2f74aa4954f701820131c2e1f38f5b267f5881953804810bf08b07eb57fd392"
         )
     ]
 )
