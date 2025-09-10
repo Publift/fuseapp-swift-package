@@ -15,7 +15,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
-            from: "12.9.0"
+            .upToNextMinor(from: "12.9.0")
         ),
         .package(
             url: "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
