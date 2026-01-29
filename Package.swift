@@ -47,8 +47,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "AmazonPublisherServicesSDK",
-            url: "https://d14jk8f50gmy3e.cloudfront.net/iOS_APS_SDK/APS_iOS_SDK-5.3.0.zip",
-            checksum: "3c317306e0147b899b70ecf8f3b54a7a5c73a1677da7260a313bf785ce64d044"
+            url: "https://d14jk8f50gmy3e.cloudfront.net/iOS_APS_SDK/APS_iOS_SDK-5.3.3.zip",
+            checksum: "8e63092764121356b6e3e56d6f1f4b108ba602fb20b93373a5129d3902f77742"
         ),
         .binaryTarget(
             name: "FBAudienceNetwork",
