@@ -57,8 +57,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "FuseAppSDKFramework",
-            url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/FuseAppSDK-iOS-2.2.0.zip",
-            checksum: "7b11cb3318db96acd2154b12ea020fa648a91e9c26192eda73104cad11e07210"
+            url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/FuseAppSDK-iOS-2.3.0.zip",
+            checksum: "0e0f01277b2e01514a327cd6e4bc92097f6f4802edb20bce37c2c26d6bf36226"
         ),
         .binaryTarget(
             name: "GoogleMobileAdsMediationFacebook",
@@ -92,8 +92,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "PubliftShared",
-            url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/PubliftShared-iOS-2.2.0.zip",
-            checksum: "9e18eecc4fd1199624ac66a35c92dad8d1ff1a9587f6fd1b20b4737c549c4104"
+            url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/PubliftShared-iOS-2.3.0.zip",
+            checksum: "25fe00aa5d192cd0bc347837ccbf00d4cde7715737673042f18cc02864608204"
         )
     ]
 )
