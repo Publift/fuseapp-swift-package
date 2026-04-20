@@ -23,7 +23,7 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/googleads/googleads-mobile-ios-mediation-liftoffmonetize.git",
-            exact: "7.6.0-release.0"
+            exact: "7.6.0"
         )
     ],
     targets: [
