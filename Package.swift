@@ -32,8 +32,8 @@ let package = Package(
             dependencies: [
                 .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
                 .product(name: "GoogleUserMessagingPlatform", package: "swift-package-manager-google-user-messaging-platform"),
-                .product(name: "LiftoffMonetizeAdapter", package: "googleads-mobile-ios-mediation-liftoffmonetize"),
                 .target(name: "AmazonPublisherServicesSDK"),
+                .product(name: "LiftoffMonetizeAdapterTarget", package: "googleads-mobile-ios-mediation-liftoffmonetize"),
                 .target(name: "FBAudienceNetwork"),
                 .target(name: "FuseAppSDKFramework"),
                 .target(name: "GoogleMobileAdsMediationFacebook"),
