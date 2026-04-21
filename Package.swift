@@ -32,8 +32,9 @@ let package = Package(
             dependencies: [
                 .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
                 .product(name: "GoogleUserMessagingPlatform", package: "swift-package-manager-google-user-messaging-platform"),
-                .target(name: "AmazonPublisherServicesSDK"),
                 .product(name: "LiftoffMonetizeAdapterTarget", package: "googleads-mobile-ios-mediation-liftoffmonetize"),
+				.target(name: "APSiOSSharedLib"),
+                .target(name: "DTBiOSSDK"),
                 .target(name: "FBAudienceNetwork"),
                 .target(name: "FuseAppSDKFramework"),
                 .target(name: "GoogleMobileAdsMediationFacebook"),
@@ -45,9 +46,14 @@ let package = Package(
             ]
         ),
         .binaryTarget(
-            name: "AmazonPublisherServicesSDK",
-            url: "https://d14jk8f50gmy3e.cloudfront.net/iOS_APS_SDK/APS_iOS_SDK-5.4.0.zip",
-            checksum: "ac4b686483faba0928151c81f1f9cc6fa519f2d248607d1018e5d813de1445e9"
+            name: "APSiOSSharedLib",
+            url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/APSiOSSharedLib-5.4.0.zip",
+            checksum: "eaff35fd4a97ab200a6a17dd4962e44e109b17806b1ef28581d53d0e2f7344e9"
+        ),
+        .binaryTarget(
+            name: "DTBiOSSDK",
+            url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/DTBiOSSDK-5.4.0.zip",
+            checksum: "b778f3c5f66f084ab97414d1d79e89363f2bcfea15cbff5c4fbb9a775b569bc2"
         ),
         .binaryTarget(
             name: "FBAudienceNetwork",
