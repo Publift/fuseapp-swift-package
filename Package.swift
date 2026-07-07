@@ -43,12 +43,18 @@ let package = Package(
                 .product(name: "InMobiAdapterTarget", package: "googleads-mobile-ios-mediation-inmobi"),
                 .product(name: "LiftoffMonetizeAdapterTarget", package: "googleads-mobile-ios-mediation-liftoffmonetize"),
                 .product(name: "MetaAdapterTarget", package: "googleads-mobile-ios-mediation-meta"),
+                .target(name: "ConfiantSDK"),
                 .target(name: "DTBiOSSDK"),
                 .target(name: "FuseAppSDKFramework"),
                 .target(name: "PrebidMobile"),
                 .target(name: "PrebidMobileOMSDK"),
                 .target(name: "PubliftShared")
             ]
+        ),
+        .binaryTarget(
+            name: "ConfiantSDK",
+            url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/ConfiantSDK-iOS-6.1.4.zip",
+            checksum: "8d80819343e94861e7b74881a8e103a3b531fb91f0713c88e157752ffb139c6f"
         ),
         .binaryTarget(
             name: "DTBiOSSDK",
