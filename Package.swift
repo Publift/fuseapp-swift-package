@@ -63,8 +63,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "FuseAppSDKFramework",
-            url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/FuseAppSDK-iOS-2.6.0.zip",
-            checksum: "c73ae5d3676f0a309d0774906da9a96654149f4d2c2aeae362fcc3c15cea74d1"
+            url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/FuseAppSDK-iOS-2.6.1.zip",
+            checksum: "c0327612e5b1f3e48a25b1943c63fd5a79bc21770875de031f007a303e9422c3"
         ),
         .binaryTarget(
             name: "PrebidMobile",
@@ -78,8 +78,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "PubliftShared",
-            url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/PubliftShared-iOS-2.6.0.zip",
-            checksum: "5e3593573113fea862d403dbd191b89692bffe11c461b1abecfb271340b2d227"
+            url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/PubliftShared-iOS-2.6.1.zip",
+            checksum: "4bf50c7e7a66e3c91d45faac901f974cd3100c730e09c0c9a08d9675653f1ab0"
         )
     ]
 )
