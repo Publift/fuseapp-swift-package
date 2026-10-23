@@ -15,19 +15,19 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
-            .upToNextMinor(from: "13.9.0")
+            .upToNextMinor(from: "13.11.0")
         ),
         .package(
             url: "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
-            from: "3.0.0"
+            from: "3.1.0"
         ),
         .package(
             url: "https://github.com/googleads/googleads-mobile-ios-mediation-liftoffmonetize.git",
-            exact: "7.7.700"
+            exact: "7.7.800"
         ),
         .package(
             url: "https://github.com/googleads/googleads-mobile-ios-mediation-inmobi.git",
-            exact: "11.4.100"
+            exact: "11.5.000"
         ),
         .package(
             url: "https://github.com/googleads/googleads-mobile-ios-mediation-meta.git",
@@ -68,8 +68,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "PrebidMobile",
-            url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/PrebidMobile-iOS-3.3.1.zip",
-            checksum: "d5a03111351519c4a4cba566e2564c882f77f2b7cb10195ce1be5a2ad6b33bd6"
+            url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/PrebidMobile-iOS-3.4.1.zip",
+            checksum: "934e27ae51d5de1b9d62c574445a795fed2a96d70962a1a45947b8590f741286"
         ),
         .binaryTarget(
             name: "PrebidMobileOMSDK",
