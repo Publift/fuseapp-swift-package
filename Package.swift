@@ -32,19 +32,23 @@ let package = Package(
         .package(
             url: "https://github.com/googleads/googleads-mobile-ios-mediation-meta.git",
             exact: "6.22.100"
+        ),
+        .package(
+            url: "https://github.com/amzn/swift-package-manager-amazon-aps.git",
+            exact: "5.7.0"
         )
     ],
     targets: [
         .target(
             name: "FuseAppSDKTargets",
             dependencies: [
+                .product(name: "AmazonPublisherServicesSDK", package: "swift-package-manager-amazon-aps", condition: .when(platforms: [.iOS])),
                 .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads", condition: .when(platforms: [.iOS])),
                 .product(name: "GoogleUserMessagingPlatform", package: "swift-package-manager-google-user-messaging-platform"),
                 .product(name: "InMobiAdapterTarget", package: "googleads-mobile-ios-mediation-inmobi", condition: .when(platforms: [.iOS])),
                 .product(name: "LiftoffMonetizeAdapterTarget", package: "googleads-mobile-ios-mediation-liftoffmonetize", condition: .when(platforms: [.iOS])),
                 .product(name: "MetaAdapterTarget", package: "googleads-mobile-ios-mediation-meta", condition: .when(platforms: [.iOS])),
                 .target(name: "ConfiantSDK"),
-                .target(name: "DTBiOSSDK"),
                 .target(name: "FuseAppSDKFramework"),
                 .target(name: "PrebidMobile"),
                 .target(name: "PrebidMobileOMSDK"),
@@ -58,11 +62,6 @@ let package = Package(
             name: "ConfiantSDK",
             url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/ConfiantSDK-iOS-6.3.0.zip",
             checksum: "3aa7ba12ea51f1981017f8b5a790cccc6b000e35e7a82594a6f6ad3dfecd96d2"
-        ),
-        .binaryTarget(
-            name: "DTBiOSSDK",
-            url: "https://dl.cloudsmith.io/BrnMk9bbufLlX4Vd/publift/fuseapp/raw/files/DTBiOSSDK-5.6.1.zip",
-            checksum: "8e07f4929156fd05ab7a2307625210a32f77d0c743e45e4a02dadd743bd6a453"
         ),
         .binaryTarget(
             name: "FuseAppSDKFramework",
