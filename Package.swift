@@ -49,6 +49,9 @@ let package = Package(
                 .target(name: "PrebidMobile"),
                 .target(name: "PrebidMobileOMSDK"),
                 .target(name: "PubliftShared")
+            ],
+            resources: [
+                .copy("PrivacyInfo.xcprivacy")
             ]
         ),
         .binaryTarget(
