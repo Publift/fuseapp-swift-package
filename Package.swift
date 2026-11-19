@@ -42,7 +42,7 @@ let package = Package(
         .target(
             name: "FuseAppSDKTargets",
             dependencies: [
-                .product(name: "AmazonPublisherServicesSDK", package: "swift-package-manager-amazon-aps"),
+                .product(name: "AmazonPublisherServicesSDK", package: "swift-package-manager-amazon-aps", condition: .when(platforms: [.iOS])),
                 .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
                 .product(name: "GoogleUserMessagingPlatform", package: "swift-package-manager-google-user-messaging-platform"),
                 .product(name: "InMobiAdapterTarget", package: "googleads-mobile-ios-mediation-inmobi"),
