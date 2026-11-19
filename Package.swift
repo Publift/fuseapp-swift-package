@@ -15,7 +15,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
-            .upToNextMinor(from: "13.11.0")
+            .upToNextMinor(from: "13.13.0")
         ),
         .package(
             url: "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
@@ -23,7 +23,7 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/googleads/googleads-mobile-ios-mediation-liftoffmonetize.git",
-            exact: "7.7.800"
+            exact: "7.8.000"
         ),
         .package(
             url: "https://github.com/googleads/googleads-mobile-ios-mediation-inmobi.git",
@@ -31,18 +31,18 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/googleads/googleads-mobile-ios-mediation-meta.git",
-            exact: "6.22.000"
+            exact: "6.22.100"
         )
     ],
     targets: [
         .target(
             name: "FuseAppSDKTargets",
             dependencies: [
-                .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
+                .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads", condition: .when(platforms: [.iOS])),
                 .product(name: "GoogleUserMessagingPlatform", package: "swift-package-manager-google-user-messaging-platform"),
-                .product(name: "InMobiAdapterTarget", package: "googleads-mobile-ios-mediation-inmobi"),
-                .product(name: "LiftoffMonetizeAdapterTarget", package: "googleads-mobile-ios-mediation-liftoffmonetize"),
-                .product(name: "MetaAdapterTarget", package: "googleads-mobile-ios-mediation-meta"),
+                .product(name: "InMobiAdapterTarget", package: "googleads-mobile-ios-mediation-inmobi", condition: .when(platforms: [.iOS])),
+                .product(name: "LiftoffMonetizeAdapterTarget", package: "googleads-mobile-ios-mediation-liftoffmonetize", condition: .when(platforms: [.iOS])),
+                .product(name: "MetaAdapterTarget", package: "googleads-mobile-ios-mediation-meta", condition: .when(platforms: [.iOS])),
                 .target(name: "ConfiantSDK"),
                 .target(name: "DTBiOSSDK"),
                 .target(name: "FuseAppSDKFramework"),
